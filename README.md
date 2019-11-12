@@ -1,2 +1,2 @@
 # YorkAI
-York's Artificial Intelligence Society
+### [Website](http://marcelmiro.github.io/YorkAI/)
