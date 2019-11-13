@@ -1,0 +1,96 @@
+
+/*    COLOR CODES    */
+/*
+    White: #FFFFFF
+    Gray: ##393939
+    Orange: #FE9C46
+ */
+
+
+/*    UNIVERSAL PROPS    */
+html, body {
+    margin: 0;
+    padding: 0;
+    background: white;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-family: "PT Sans", Helvetica, Arial, sans-serif;
+    color: #393939;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Roboto Slab", serif;
+    color: #FE9C46;
+}
+::selection {
+    color: black;
+    background: #E9F0F9;
+}
+::-moz-selection {
+    color: black;
+    background: #E9F0F9;
+}
+.no-select {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+button, button::selection, button:visited, button:hover, button:focus {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    user-select: none;
+}
+
+
+/*    NAV BAR    */
+
+
+/*    HOME    */
+#homeSection {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    text-align: center;
+}
+#homeSection > .title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    text-align: left;
+}
+#homeSection > .title > * {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+}
+#homeSection > .title > img {
+    width: 250px;
+}
+#homeSection > .title > h1 {
+    white-space: normal;
+    color: #393939;
+    margin-left: 75px;
+    width: 380px;
+}
+#homeSection > .title > h1 > span { color: #FE9C46; }
+
+
+/*    TEAM    */
+
+
+/*    CONTACT    */
+
+
+/*    MEDIA QUERY    */
+
