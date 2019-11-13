@@ -10,10 +10,11 @@ window.addEventListener("load", function () {
     smoothScroll();
 });
 $(window).on('beforeunload', function () {
-    $(window).scrollTop(0);
 });
 $(document).ready(function() {
     navOnLoad();
+    navScroll();
+    eventSlider();
 });
 $(document).resize(function() {
     navResize();
@@ -81,7 +82,23 @@ function navScroll() {
         $('#navSection a:contains("Sponsors")').css('font-size', hoverSize + "px");
     } else if (scrollPos >= pContact - windowH / 2) {
         $('#navSection a').css('font-size', normalSize + "px");
-        $('#navSection a:contains("Contact")').css('font-size', hoverSize + "px");
+        $('#navSection a:contains("Join")').css('font-size', hoverSize + "px");
     }
+}
+
+
+//    EVENTS
+function eventSlider() {
+    $("#eventSection > .wrapper").slick({
+        prevArrow: '<div style="display: none;" class="arrow left"></div>',
+        nextArrow: '<div style="display: none;" class="arrow right"></div>',
+        dots: true,
+        centerMode: true,
+        infinite: true,
+        slidesToShow: 1,
+        autoplay: true,
+        autoplaySpeed: 12000,
+        initialSlide: 0
+    });
 }
 

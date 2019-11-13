@@ -20,7 +20,9 @@ html, body {
 h1, h2, h3, h4, h5, h6 {
     font-family: "Roboto Slab", serif;
     color: #FE9C46;
+    text-align: center;
 }
+h2 { font-size: 40px; }
 a, a:hover, a:visited {
     border: none;
     text-decoration: none;
@@ -80,6 +82,25 @@ button.button:hover {
 button.button:focus {
     outline: none;
 }
+.underline, a.underline, a.underline:visited {
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    color: #FE9C46;
+}
+.underline:after, a.underline:after, a.underline:visited:after {
+    content: "";
+    height: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    background: #FE9C46;
+    transition: 0.4s;
+}
+.underline:hover:after, a.underline:hover:after, a.underline:visited:hover:after {
+    width: 100%;
+}
 
 
 /*    NAV BAR    */
@@ -123,7 +144,7 @@ button.button:focus {
     margin: 0;
     padding: 0;
     width: 100vw;
-    height: 100vh;
+    height: 80vh;
     position: relative;
     text-align: center;
 }
@@ -156,7 +177,7 @@ button.button:focus {
     width: 40vw;
     left: 50%;
     transform: translateX(-50%);
-    top: 60%;
+    top: 58%;
 }
 #homeSection > .desc > p {
     text-align: center;
@@ -164,11 +185,100 @@ button.button:focus {
 #homeSection > .desc button { margin-top: 40px; }
 
 
+/*    EVENTS    */
+#eventSection {
+    position: relative;
+    width: 100vw;
+    height: 20vh;
+    text-align: center;
+    background-color: #F0F0F0;
+}
+#eventSection > .wrapper {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+#eventSection .slick-slider, #eventSection .slick-list, #eventSection .slick-track, #eventSection .slick-slide, #eventSection .slick-slide > div { height: 100%; }
+#eventSection .slider-card {
+    position: relative;
+    margin: 0 125px;
+    width: 1000px !important;
+    height: 100%;
+    z-index: 5;
+    top: 50%;
+    transform: translateY(-32%);
+}
+#eventSection > .wrapper a.h3 {
+    font-family: "Roboto Slab", serif;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+#eventSection > .wrapper p {}
+#eventSection .underline:after, #eventSection a.underline:after, #eventSection a.underline:visited:after { height: 3px; }
+#eventSection .arrow {
+    z-index: 105;
+    position: absolute;
+    bottom: 250px;
+    width: 35px;
+    height: 60px;
+    -webkit-transition: all 0.1s;
+    -o-transition: all 0.1s;
+    transition: all 0.1s;
+    opacity: 0.9;
+    cursor: pointer;
+}
+#eventSection .arrow.left {
+    background: url("assets/arrow-left.svg") no-repeat;
+    left: 50%;
+    transform: translateX(-200px);
+}
+#eventSection .arrow.right {
+    background: url("assets/arrow-right.svg") no-repeat;
+    right: 50%;
+    transform: translateX(200px);
+}
+#eventSection .slick-dots { position: absolute; bottom: 30px; }
+#eventSection .slick-dots li button:before {
+    font-size: 10px;
+    line-height: 50px;
+    opacity: .3;
+    color: #666666;
+}
+#eventSection .slick-dots li button { opacity: .8; }
+#eventSection .slick-dots li.slick-active button:before { opacity: .9; }
+#eventSection .slick-list { overflow: visible !important; }
+
+
 /*    TEAM    */
+#teamSection {
+    margin: 0;
+    padding-top: 100px;
+    text-align: center;
+}
+#teamSection h2 { margin-bottom: 75px; }
+#teamSection .row + .row { margin-top: 50px; }
+#teamSection .col-md-4 > * + * { margin-top: 20px; }
+#teamSection img {
+    width: 200px;
+    border-radius: 100%;
+}
+#teamSection h5 { font-size: 24px; }
+#teamSection h6 { font-size: 19px; color: #444444; }
+#teamSection p { color: #666666; }
+
+
+/*    SPONSORS    */
+#sponsorsSection {
+    margin: 0;
+    padding-top: 100px;
+}
 
 
 /*    CONTACT    */
-
+#contactSection {
+    margin: 0;
+    padding-top: 100px;
+}
 
 /*    MEDIA QUERY    */
 
