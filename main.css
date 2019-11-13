@@ -192,6 +192,7 @@ button.button:focus {
     height: 20vh;
     text-align: center;
     background-color: #F0F0F0;
+    margin-bottom: 100px;
 }
 #eventSection > .wrapper {
     margin: 0;
@@ -252,7 +253,7 @@ button.button:focus {
 /*    TEAM    */
 #teamSection {
     margin: 0;
-    padding-top: 100px;
+    padding-bottom: 100px;
     text-align: center;
 }
 #teamSection h2 { margin-bottom: 75px; }
@@ -270,20 +271,24 @@ button.button:focus {
 /*    SPONSORS    */
 #sponsorsSection {
     margin: 0;
-    padding-top: 100px;
+    padding-bottom: 100px;
 }
+#sponsorsSection h2 { margin-bottom: 75px; }
+#sponsorsSection img {
+    height: 150px;
+    width: auto;
+}
+#sponsorsSection .col-sm-6 { text-align: center; }
 
 
 /*    CONTACT    */
 #contactSection {
     margin: 0;
-    padding-top: 100px;
 }
+
 
 /*    MEDIA QUERY    */
-
-@media screen and (max-width: 1500px) {
-}
+@media screen and (max-width: 1500px) {}
 
 
 /*    ANIMATIONS    */
