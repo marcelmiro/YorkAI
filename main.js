@@ -15,6 +15,9 @@ $(window).on('beforeunload', function () {
 $(document).ready(function() {
     navOnLoad();
 });
+$(document).resize(function() {
+    navResize();
+});
 $(document).scroll(function() {
     navScroll();
 });
@@ -26,7 +29,7 @@ function smoothScroll() {
         $("html, body").clearQueue();
 
         if (location.pathname.replace(/^\//, "") === this.pathname.replace(/^\//, "") && location.hostname === this.hostname) {
-            var target = $(this.hash);
+            let target = $(this.hash);
             target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
 
             if (target.length) {
@@ -48,19 +51,25 @@ function smoothScroll() {
 
 
 //    NAV BAR
-var normalSize = 20;
-var hoverSize = 30;
+let normalSize = 20;
+let hoverSize = 30;
+let pHome = $('#homeSection').offset().top;
+let pTeam = $('#teamSection').offset().top;
+let pSponsors = $('#sponsorsSection').offset().top;
+let pContact = $('#contactSection').offset().top;
+let windowH = $(window).height();
+function navResize() {
+    pHome = $('#homeSection').offset().top;
+    pTeam = $('#teamSection').offset().top;
+    pSponsors = $('#sponsorsSection').offset().top;
+    pContact = $('#contactSection').offset().top;
+    windowH = $(window).height();
+}
 function navOnLoad() {
     $('#navSection a:contains("Home")').css('font-size', hoverSize + "px");
 }
 function navScroll() {
-    var pHome = $('#homeSection').offset().top;
-    var pTeam = $('#teamSection').offset().top;
-    var pSponsors = $('#sponsorsSection').offset().top;
-    var pContact = $('#contactSection').offset().top;
-    var scrollPos = $(document).scrollTop();
-    var windowH = $(window).height();
-
+    let scrollPos = $(document).scrollTop();
     if (scrollPos >= pHome && scrollPos < pTeam - windowH / 2) {
         $('#navSection a').css('font-size', normalSize + "px");
         $('#navSection a:contains("Home")').css('font-size', hoverSize + "px");

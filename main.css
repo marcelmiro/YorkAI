@@ -153,7 +153,7 @@ button.button:focus {
 #homeSection > .desc {
     position: relative;
     text-align: center;
-    width: 50vw;
+    width: 40vw;
     left: 50%;
     transform: translateX(-50%);
     top: 60%;
@@ -161,7 +161,7 @@ button.button:focus {
 #homeSection > .desc > p {
     text-align: center;
 }
-#homeSection > .desc button { margin-top: 30px; }
+#homeSection > .desc button { margin-top: 40px; }
 
 
 /*    TEAM    */
@@ -173,5 +173,4 @@ button.button:focus {
 /*    MEDIA QUERY    */
 
 @media screen and (max-width: 1500px) {
-    #teamSection > div { height: 50vh !important; }
 }
