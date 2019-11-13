@@ -336,8 +336,8 @@ button.button:focus {
 }
 #copyrightSection > p {
     font-family: Roboto, sans-serif;
-    font-size: 18px;
-    font-weight: 300;
+    font-size: 15px;
+    font-weight: 700;
     color: white;
     position: absolute;
     top: 50%;
