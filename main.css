@@ -284,6 +284,65 @@ button.button:focus {
 /*    CONTACT    */
 #contactSection {
     margin: 0;
+    text-align: center;
+}
+#contactSection h2 { margin-bottom: 50px; }
+#contactSection h3 {
+    color: #393939;
+    font-size: 24px;
+}
+#contactSection button.button {
+    margin: 25px auto 30px;
+    background: none;
+    color: #FE9C46;
+    border: 3px solid #FE9C46;
+    -webkit-border-radius: 36px;
+    border-radius: 36px;
+    -webkit-box-shadow: 0 2px 30px rgba(254, 156, 70, 0.3);
+    box-shadow: 0 2px 30px rgba(254, 156, 70, 0.3);
+    text-shadow: 0 1px 30px rgba(254, 156, 70, 0.6);
+}
+#contactSection button.button:hover {
+    -webkit-box-shadow: 0 2px 40px 3px rgba(254, 156, 70, 0.5);
+    box-shadow: 0 2px 40px 3px rgba(254, 156, 70, 0.5);
+    text-shadow: 0 5px 22px 3px rgba(254, 156, 70, 0.7);
+}
+#contactSection h4 {
+    color: #393939;
+    font-size: 18px;
+    margin-top: 40px;
+}
+#contactSection #contact-info {
+    margin-top: 20px;
+}
+#contactSection #contact-info img {
+    width: 50px;
+    transition: all .2s ease-in-out;
+}
+#contactSection #contact-info img:hover {
+    transform: scale(1.1);
+}
+#contactSection #contact-info :not(:first-child) { margin-left: 10px; }
+
+
+/*    COPYRIGHT    */
+#copyrightSection {
+    position: relative;
+    width: 100vw;
+    height: 50px;
+    background-color: #393939;
+    margin-top: 50px;
+    overflow-y: hidden;
+}
+#copyrightSection > p {
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 

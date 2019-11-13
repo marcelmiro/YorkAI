@@ -99,3 +99,21 @@ function eventSlider() {
     });
 }
 
+
+//    CONTACT
+let email = "yorkai@yusu.org";
+function copyEmail() {
+    let $temp = $("<input>");
+    $("body").append($temp);
+    $temp.val(email).select();
+    document.execCommand("copy");
+    $temp.remove();
+    $("#contactSection #email-button").notify(
+        "Email copied to clipboard...",
+        "success",
+        {
+            autoHide: true,
+            autoHideDelay: 5000,
+        }
+    );
+}
