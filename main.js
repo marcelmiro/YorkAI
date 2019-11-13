@@ -54,33 +54,30 @@ function smoothScroll() {
 //    NAV BAR
 let normalSize = 20;
 let hoverSize = 30;
-let pHome = $('#homeSection').offset().top;
-let pTeam = $('#teamSection').offset().top;
-let pSponsors = $('#sponsorsSection').offset().top;
-let pContact = $('#contactSection').offset().top;
-let windowH = $(window).height();
+let windowH, pHome, pTeam, pSponsors, pContact;
+navResize();
 function navResize() {
-    pHome = $('#homeSection').offset().top;
-    pTeam = $('#teamSection').offset().top;
-    pSponsors = $('#sponsorsSection').offset().top;
-    pContact = $('#contactSection').offset().top;
     windowH = $(window).height();
+    pHome = $('#homeSection').offset().top;
+    pTeam = $('#teamSection').offset().top - windowH / 2;
+    pSponsors = $('#sponsorsSection').offset().top - windowH / 2;
+    pContact = $('#contactSection').offset().top - windowH / 2;
 }
 function navOnLoad() {
     $('#navSection a:contains("Home")').css('font-size', hoverSize + "px");
 }
 function navScroll() {
     let scrollPos = $(document).scrollTop();
-    if (scrollPos >= pHome && scrollPos < pTeam - windowH / 2) {
+    if (scrollPos >= pHome && scrollPos < pTeam) {
         $('#navSection a').css('font-size', normalSize + "px");
         $('#navSection a:contains("Home")').css('font-size', hoverSize + "px");
-    } else if (scrollPos >= pTeam - windowH / 2 && scrollPos < pSponsors - windowH / 2) {
+    } else if (scrollPos >= pTeam && scrollPos < pSponsors) {
         $('#navSection a').css('font-size', normalSize + "px");
         $('#navSection a:contains("Team")').css('font-size', hoverSize + "px");
-    } else if (scrollPos >= pSponsors - windowH / 2 && scrollPos < pContact - windowH / 2) {
+    } else if (scrollPos >= pSponsors && scrollPos < pContact) {
         $('#navSection a').css('font-size', normalSize + "px");
         $('#navSection a:contains("Sponsors")').css('font-size', hoverSize + "px");
-    } else if (scrollPos >= pContact - windowH / 2) {
+    } else if (scrollPos >= pContact) {
         $('#navSection a').css('font-size', normalSize + "px");
         $('#navSection a:contains("Join")').css('font-size', hoverSize + "px");
     }
