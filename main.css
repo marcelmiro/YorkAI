@@ -21,6 +21,12 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "Roboto Slab", serif;
     color: #FE9C46;
 }
+a, a:hover, a:visited {
+    border: none;
+    text-decoration: none;
+    outline: none;
+    color: #393939;
+}
 ::selection {
     color: black;
     background: #E9F0F9;
@@ -36,20 +42,80 @@ h1, h2, h3, h4, h5, h6 {
     -ms-user-select: none;
     user-select: none;
 }
-button, button::selection, button:visited, button:hover, button:focus {
-    padding: 0;
-    border: none;
-    font: inherit;
-    color: inherit;
-    background-color: transparent;
-    cursor: pointer;
-    outline: none;
-    text-decoration: none;
+img {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     user-select: none;
+}
+button.button {
+    padding: 15px 35px;
+    color: white;
+    border: none;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 30px;
+    background-color: #FE9C46;
+    -webkit-box-shadow: 0 0 20px 0 rgba(254, 156, 70, 0.5);
+    box-shadow: 0 0 20px 0 rgba(254, 156, 70, 0.5);
+    transition: box-shadow 0.15s ease-in-out;
+    z-index: 10;
+    outline: transparent none;
+    cursor: pointer;
+    font-weight: bold;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+button.button:hover {
+    -webkit-box-shadow: 0 0 24px 3px rgba(254, 156, 70, 0.5);
+    box-shadow: 0 0 24px 3px rgba(254, 156, 70, 0.5);
+    outline: none;
+}
+button.button:focus {
+    outline: none;
 }
 
 
 /*    NAV BAR    */
+#navSection {
+    position: fixed;
+    width: 0;
+    height: 100vh;
+    font-size: 32px;
+    font-family: "Roboto Slab", serif;
+    color: #393939;
+    z-index: 999;
+}
+#navSection > nav {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    text-align: right;
+}
+#navSection nav ul {
+    list-style: none;
+}
+#navSection nav ul li {
+    position: relative;
+    margin: 10px 0;
+}
+#navSection nav ul li a {
+    line-height: 2.5;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    opacity: .5;
+    font-size: 20px;
+    transition: all ease-out 300ms;
+}
+#navSection nav ul li:hover a { opacity: 1; }
 
 
 /*    HOME    */
@@ -65,7 +131,7 @@ button, button::selection, button:visited, button:hover, button:focus {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -100%);
     white-space: nowrap;
     text-align: left;
 }
@@ -84,6 +150,18 @@ button, button::selection, button:visited, button:hover, button:focus {
     width: 380px;
 }
 #homeSection > .title > h1 > span { color: #FE9C46; }
+#homeSection > .desc {
+    position: relative;
+    text-align: center;
+    width: 50vw;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 60%;
+}
+#homeSection > .desc > p {
+    text-align: center;
+}
+#homeSection > .desc button { margin-top: 30px; }
 
 
 /*    TEAM    */
@@ -94,3 +172,6 @@ button, button::selection, button:visited, button:hover, button:focus {
 
 /*    MEDIA QUERY    */
 
+@media screen and (max-width: 1500px) {
+    #teamSection > div { height: 50vh !important; }
+}
