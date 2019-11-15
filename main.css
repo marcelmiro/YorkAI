@@ -384,8 +384,8 @@ button.button:focus {
     #homeSection > .text > .title > * { display: block; margin: 0 auto; }
     #homeSection > .text > .title > h1 { text-align: center; margin: 35px 0 0; }
     #homeSection > .text > p { width: 280px; }
-    #homeSection > .text > p.small { display: none; }
-    #homeSection > .text > p.smaller { display: block; visibility: visible; }
+    #homeSection > .text > p.small { display: none !important; }
+    #homeSection > .text > p.smaller { display: block !important; visibility: visible !important; }
 }
 @media screen and (max-width: 350px) {
     #homeSection > .text > .title > img { width: 150px; }
@@ -399,9 +399,8 @@ button.button:focus {
     #homeSection > .text > p { visibility: hidden !important; display: none !important; }
     #homeSection > .text > button { position: absolute; left: 50%; transform: translateX(-50%); bottom: 10px; }
 }
-@media screen and (min-width: 700px) and (max-width: 800px) and (max-height: 550px) {
+@media screen and (min-width: 700px) and (max-width: 900px) and (max-height: 550px) {
     #homeSection > .text > p { visibility: hidden !important; display: none !important; }
-    #homeSection > .text > p.smaller { display: block !important; visibility: visible !important; }
 }
 
 
