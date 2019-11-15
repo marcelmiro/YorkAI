@@ -87,6 +87,7 @@ function navScroll() {
 //    EVENTS
 function eventSlider() {
     $("#eventSection > .wrapper").slick({
+        arrows: false,
         prevArrow: '<div style="display: none;" class="arrow left"></div>',
         nextArrow: '<div style="display: none;" class="arrow right"></div>',
         dots: true,

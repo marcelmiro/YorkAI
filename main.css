@@ -394,9 +394,14 @@ button.button:focus {
     #homeSection > .text button { font-size: 17px; padding: 8px 24px; }
 }
 
-@media screen and (orientation: landscape) and (max-width: 600px) {
+@media screen and (orientation: landscape) and (max-width: 700px) {
     #homeSection > .text > .title > * { display: inline-block !important; }
     #homeSection > .text > p { visibility: hidden !important; display: none !important; }
+    #homeSection > .text > button { position: absolute; left: 50%; transform: translateX(-50%); bottom: 10px; }
+}
+@media screen and (min-width: 700px) and (max-width: 800px) and (max-height: 550px) {
+    #homeSection > .text > p { visibility: hidden !important; display: none !important; }
+    #homeSection > .text > p.smaller { display: block !important; visibility: visible !important; }
 }
 
 
